@@ -7,8 +7,8 @@ import Adafruit_MCP3008
 def detect_eeprom():
     filename = "/proc/device-tree/hat/product_id"
     file = open(filename, "r")
-    product_id = file.read()
-    if product_id = "0x4313":
+    product_id = str(file.read())
+    if product_id[0:6] = "0x4313":
         return True
     return False
 
