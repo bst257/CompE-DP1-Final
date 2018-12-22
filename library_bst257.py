@@ -8,7 +8,7 @@ def detect_eeprom():
     filename = "/proc/device-tree/hat/product_id"
     file = open(filename, "r")
     product_id = str(file.read())
-    if product_id[0:6] = "0x4313":
+    if "0x4313" in product_id:
         return True
     return False
 
